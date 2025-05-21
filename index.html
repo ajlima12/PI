@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto de PI - Moderno e Inovador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'], // Adiciona uma fonte serifada para títulos, similar ao Bautz
+                    },
+                    colors: {
+                        primary: '#A08A6F', // Um tom dourado/bronze, similar ao Bautz
+                        secondary: '#F5F5F5', // Um cinza claro para fundos
+                        dark: '#333333', // Cor para textos escuros
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-dark bg-white">
+
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="close-menu" class="absolute top-4 right-4 text-dark text-2xl">&times;</button>
+        <nav class="flex flex-col space-y-4 pt-10">
+            <a href="#home" class="text-lg font-semibold hover:text-primary transition-colors">Início</a>
+            <a href="#sobre" class="text-lg font-semibold hover:text-primary transition-colors">Sobre o Projeto</a>
+            <a href="#solucoes" class="text-lg font-semibold hover:text-primary transition-colors">Soluções</a>
+            <a href="#galeria" class="text-lg font-semibold hover:text-primary transition-colors">Galeria</a>
+            <a href="#contato" class="text-lg font-semibold hover:text-primary transition-colors">Fale Conosco</a>
+        </nav>
+    </div>
+
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-30">
+        <a href="#" class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">P</div>
+            <span class="text-2xl font-bold font-serif text-dark">Meu PI</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-lg font-semibold hover:text-primary transition-colors">Início</a>
+            <a href="#sobre" class="text-lg font-semibold hover:text-primary transition-colors">Sobre o Projeto</a>
+            <a href="#solucoes" class="text-lg font-semibold hover:text-primary transition-colors">Soluções</a>
+            <a href="#galeria" class="text-lg font-semibold hover:text-primary transition-colors">Galeria</a>
+            <a href="#contato" class="text-lg font-semibold hover:text-primary transition-colors">Fale Conosco</a>
+        </nav>
+
+        <button id="menu-button" class="md:hidden text-dark focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-cover bg-center parallax-bg" style="background-image: url('https://placehold.co/1920x1080/E0E0E0/FFFFFF?text=Imagem+Hero+do+PI');">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 p-8 max-w-4xl mx-auto text-white animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold font-serif mb-6 leading-tight animate-slide-up">
+                Inovando o Futuro com o Nosso Projeto de PI
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+                Descubra como estamos transformando ideias em realidade, criando soluções impactantes para o mundo.
+            </p>
+            <a href="#sobre" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 animate-slide-up" style="animation-delay: 0.4s;">
+                Conheça Nosso Projeto
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-16 md:py-24 bg-secondary px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in">
+                <h2 class="text-4xl font-bold font-serif text-dark mb-6">Nossa Visão e Propósito</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    Desde o início, o Projeto de PI tem sido uma jornada de dedicação e inovação. Nosso objetivo é [descreva brevemente o objetivo principal do seu PI]. Acreditamos que [sua crença ou valor central] é fundamental para construir um futuro melhor.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Com uma equipe apaixonada e o uso de tecnologias de ponta, estamos comprometidos em [descreva o que seu projeto faz ou entrega]. Cada etapa do nosso desenvolvimento é pensada para [benefício ou impacto do projeto].
+                </p>
+            </div>
+            <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                <img src="https://placehold.co/600x400/D0D0D0/333333?text=Imagem+Sobre+o+Projeto" alt="Sobre o Projeto" class="rounded-lg shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="py-16 md:py-24 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold font-serif text-dark mb-12 animate-fade-in">O Que Nosso Projeto Oferece</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-slide-up">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4c0 0 0 0 0 0h4l-1-1-1.25-3M15 10V5.75c0-.414.336-.75.75-.75h3.5c.414 0 .75.336.75.75V10m-4.5 0h4.5m-4.5 0a.75.75 0 00-.75.75v3.5c0 .414.336.75.75.75h3.5c.414 0 .75-.336.75-.75V10"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Solução Inovadora A</h3>
+                    <p class="text-md text-gray-700">
+                        Detalhes sobre a primeira solução ou funcionalidade chave do seu projeto de PI. Explique o benefício.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Abordagem Única B</h3>
+                    <p class="text-md text-gray-700">
+                        Descreva a segunda funcionalidade ou a abordagem diferenciada que seu projeto utiliza.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="text-primary mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Resultados Tangíveis C</h3>
+                    <p class="text-md text-gray-700">
+                        Fale sobre os resultados esperados ou já alcançados com a implementação do seu projeto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-16 md:py-24 bg-secondary px-6 md:px-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold font-serif text-dark mb-12 animate-fade-in">Galeria do Projeto</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="animate-slide-up">
+                    <img src="https://placehold.co/400x300/C0C0C0/333333?text=Imagem+1" alt="Destaque 1" class="rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    <p class="mt-4 text-lg font-semibold">Protótipo Inicial</p>
+                </div>
+                <div class="animate-slide-up" style="animation-delay: 0.1s;">
+                    <img src="https://placehold.co/400x300/B0B0B0/333333?text=Imagem+2" alt="Destaque 2" class="rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    <p class="mt-4 text-lg font-semibold">Interface de Usuário</p>
+                </div>
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/400x300/A0A0A0/333333?text=Imagem+3" alt="Destaque 3" class="rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    <p class="mt-4 text-lg font-semibold">Processo de Desenvolvimento</p>
+                </div>
+                <div class="animate-slide-up" style="animation-delay: 0.3s;">
+                    <img src="https://placehold.co/400x300/909090/333333?text=Imagem+4" alt="Destaque 4" class="rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    <p class="mt-4 text-lg font-semibold">Teste e Validação</p>
+                </div>
+                 <div class="animate-slide-up" style="animation-delay: 0.4s;">
+                    <img src="https://placehold.co/400x300/808080/333333?text=Imagem+5" alt="Destaque 5" class="rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    <p class="mt-4 text-lg font-semibold">Impacto e Aplicação</p>
+                </div>
+                 <div class="animate-slide-up" style="animation-delay: 0.5s;">
+                    <img src="https://placehold.co/400x300/707070/333333?text=Imagem+6" alt="Destaque 6" class="rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    <p class="mt-4 text-lg font-semibold">Visão Futura</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-16 md:py-24 px-6 md:px-12">
+        <div class="max-w-3xl mx-auto text-center animate-fade-in">
+            <h2 class="text-4xl font-bold font-serif text-dark mb-8">Entre em Contato</h2>
+            <p class="text-lg leading-relaxed mb-8">
+                Tem alguma pergunta, sugestão ou gostaria de saber mais sobre o nosso projeto? Preencha o formulário abaixo ou entre em contato conosco diretamente.
+            </p>
+            <form class="space-y-6">
+                <div>
+                    <input type="text" placeholder="Seu Nome" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200">
+                </div>
+                <div>
+                    <input type="email" placeholder="Seu Email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200">
+                </div>
+                <div>
+                    <textarea placeholder="Sua Mensagem" rows="6" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white font-semibold py-4 rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-300">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-8 px-6 md:px-12 text-center">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-md">&copy; 2025 Meu Projeto de PI. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-white hover:text-primary transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.779 1.648 4.998 4.998.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.648 4.779-4.998 4.998-.058 1.265-.07 1.645-.07 4.85s.012 3.584.07 4.85c.148 3.252 1.648 4.779 4.998 4.998 1.265.058 1.645.07 4.85.07s3.584-.012 4.85-.07c3.252-.148 4.779-1.648 4.998-4.998.058-1.265.07-1.645.07-4.85s-.012-3.584-.07-4.85c-.148-3.252-1.648-4.779-4.998-4.998-1.265-.058-1.645-.07-4.85-.07zm0 2.884c3.287 0 3.694.012 4.99.07c2.72.124 3.996 1.404 4.148 4.148.058 1.296.07 1.703.07 4.99s-.012 3.694-.07 4.99c-.124 2.72-1.404 3.996-4.148 4.148-1.296.058-1.703.07-4.99.07s-3.694-.012-4.99-.07c-2.72-.124-3.996-1.404-4.148-4.148-.058-1.296-.07-1.703-.07-4.99s.012-3.694.07-4.99c.124-2.72 1.404-3.996 4.148-4.148 1.296-.058 1.703-.07 4.99-.07zm0 3.627c-2.316 0-4.2 1.884-4.2 4.2s1.884 4.2 4.2 4.2 4.2-1.884 4.2-4.2-1.884-4.2-4.2-4.2zm0 7c-1.59 0-2.884-1.294-2.884-2.884s1.294-2.884 2.884-2.884 2.884 1.294 2.884 2.884-1.294 2.884-2.884 2.884zm5.176-7.818c0-.573-.464-1.037-1.037-1.037s-1.037.464-1.037 1.037.464 1.037 1.037 1.037 1.037-.464 1.037-1.037z"/></svg>
+                </a>
+                <a href="#" class="text-white hover:text-primary transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.8 1.79-1.99 3.2-3.48 4.2-.67.45-1.43.7-2.26.7-.49 0-.96-.08-1.41-.24.59-1.3.93-2.78.93-4.38 0-1.5-.34-2.92-.93-4.22.49.08.96.24 1.41.4.99.34 1.8.84 2.5 1.5.8-.16 1.5-.4 2.2-.64-.24.79-.79 1.46-1.5 1.99zM19.9 4.04c-.79-.24-1.6-.4-2.4-.4-.8 0-1.6.08-2.4.24-.79.16-1.5.4-2.2.64.49-1.3.93-2.78.93-4.38 0-1.5-.34-2.92-.93-4.22.49.08.96.24 1.41.4.99.34 1.8.84 2.5 1.5.8-.16 1.5-.4 2.2-.64-.24.79-.79 1.46-1.5 1.99zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.79 6.42c-.44-.24-.9-.44-1.39-.6-.49-.16-.99-.24-1.5-.24-.51 0-1.01.08-1.5.24-.49.16-.94.36-1.39.6-.44.24-.84.52-1.2.84-.36.32-.64.68-.84 1.08-.2.4-.32.84-.32 1.28 0 .44.12.84.32 1.28.2.4.48.76.84 1.08.36.32.76.6 1.2.84.49.24.99.44 1.5.6.51.16 1.01.24 1.5.24.51 0 1.01-.08 1.5-.24.49-.16.94-.36 1.39-.6.44-.24.84-.52 1.2-.84.36-.32.64-.68.84-1.08.2-.4.32-.84.32-1.28 0-.44-.12-.84-.32-1.28-.2-.4-.48-.76-.84-1.08z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

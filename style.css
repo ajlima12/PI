@@ -1,0 +1,59 @@
+/* Estilos personalizados para animações */
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.animate-slide-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo para o background parallax (opcional, para um efeito sutil) */
+.parallax-bg {
+  background-image: url('https://placehold.co/1920x1080/E0E0E0/FFFFFF?text=Fundo+do+Projeto'); /* Placeholder de imagem */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos para o menu mobile */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 40;
+  display: none; /* Escondido por padrão */
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Inicia fora da tela */
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: white;
+  z-index: 50;
+  transition: right 0.3s ease-in-out;
+  padding: 2rem;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.mobile-menu.open {
+  right: 0; /* Desliza para dentro */
+}
